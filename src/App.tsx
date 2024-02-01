@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './popup.css';
+import CoffeeButton from './CoffeButton';
 
 function App() {
   // Definiálunk egy helyi állapotot a checkbox és az állapot szövegének kezelésére
@@ -25,23 +26,19 @@ function App() {
       });
     });
   };
-
+  
   return (
 
     <div className="main">		
-		<div>
-			<h4 className="blue" id="state">{isTGExtensionActive !== false ? "Nincs TG :)" : "Van TG :("}</h4>
-		</div>
-		<div className="control">
-      <input type="checkbox" id="toggle" className="checkbox" checked={isTGExtensionActive} onChange={handleChange} />
-			<label htmlFor="toggle" className="switch"></label>
-		</div>
-		
-		<div className="control">				
-		   <a href="https://www.buymeacoffee.com/petke" target="_blank"><img src="https://img.buymeacoffee.com/button-api/?text=kérek  1 pizzát :)&emoji=🍕&slug=petke&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" /></a>							
-		</div>
-	
-	</div>
+      <div>
+        <h4 className="blue" id="state">{isTGExtensionActive !== false ? "Nincs TG :)" : "Van TG :("}</h4>
+      </div>
+      <div className="control">
+        <input type="checkbox" id="toggle" className="checkbox" checked={isTGExtensionActive} onChange={handleChange} />
+        <label htmlFor="toggle" className="switch"></label>
+      </div>
+      <div className='control'><CoffeeButton /></div>
+	  </div>
     
   );
 }

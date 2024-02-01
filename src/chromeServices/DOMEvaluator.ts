@@ -4,6 +4,8 @@ function removeContentBasedOnTextAndImages(): void {
     const textElements: NodeListOf<Element> = document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, span, a');
     textElements.forEach((element: Element) => {
       let textMatch: boolean = element.textContent?.includes('Tóth Gabi') || element.textContent?.includes('Gabi Tóth') || false;
+      
+      // eslint-disable-next-line
       let hrefMatch: boolean = element.tagName === 'A' && (element.getAttribute('href')?.includes('toth_gabi') || element.getAttribute('href')?.includes('toth-gabi') || element.getAttribute('href')?.includes('tothgabi') || element.getAttribute('href')?.includes('Toth_Gabi')) || false;
       let titleMatch: boolean = element.getAttribute('title')?.includes('toth_gabi') || element.getAttribute('title')?.includes('toth-gabi') || element.getAttribute('title')?.includes('tothgabi') || element.getAttribute('title')?.includes('Toth_Gabi') || false;
       if (textMatch || hrefMatch || titleMatch) {
