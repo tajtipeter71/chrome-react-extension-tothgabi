@@ -2,7 +2,7 @@
 # Tóth Gabi Content Blocker 1.5.3 
 
 
-A méltán csodálatos Tóth Gabi Content Blocker chrome kigészítő azon fejlesztőknek szánt példánya, akik szeretik a React User Interface-t.
+A méltán csodálatos Tóth Gabi Content Blocker chrome kigészítő azon fejlesztőknek szánt példánya, akik szeretik a React User Interface-t, Typescripttel megbolondítva.
 
 ## Telepítés
 ### `npm install`
