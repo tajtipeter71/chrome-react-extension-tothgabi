@@ -1,18 +1,22 @@
 
 function removeContentBasedOnTextAndImages(): void {
+
+  const regex = /Tóth\s*Gabi|toth[_-]?gabi|Gabi\s*Tóth/i;
+
+
     // Text content search
     const textElements: NodeListOf<Element> = document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, span, a');
     textElements.forEach((element: Element) => {
-      let textMatch: boolean = element.textContent?.includes('Tóth Gabi') || element.textContent?.includes('Gabi Tóth') || false;
+
+      let textMatch: boolean = regex.test(element.textContent || ''); 
+      let hrefMatch: boolean = element.tagName === 'A' && regex.test(element.getAttribute('href') || '');
+      let titleMatch: boolean = regex.test(element.getAttribute('title') || '');
       
-      // eslint-disable-next-line
-      let hrefMatch: boolean = element.tagName === 'A' && (element.getAttribute('href')?.includes('toth_gabi') || element.getAttribute('href')?.includes('toth-gabi') || element.getAttribute('href')?.includes('tothgabi') || element.getAttribute('href')?.includes('Toth_Gabi')) || false;
-      let titleMatch: boolean = element.getAttribute('title')?.includes('toth_gabi') || element.getAttribute('title')?.includes('toth-gabi') || element.getAttribute('title')?.includes('tothgabi') || element.getAttribute('title')?.includes('Toth_Gabi') || false;
       if (textMatch || hrefMatch || titleMatch) {
         let closestDiv: HTMLElement | null = element.closest('div');
         if (closestDiv) {
           closestDiv.style.display = 'none';
-          // Hide closest pictures
+          
           const relatedImages: NodeListOf<HTMLImageElement> = closestDiv.querySelectorAll('img');
           relatedImages.forEach((img: HTMLImageElement) => {
             img.style.display = 'none';
