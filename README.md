@@ -1,4 +1,4 @@
-![Tóth Gabi Content Blocker](icon128.png)
+![Tóth Gabi Content Blocker](public/icon128.png)
 # Tóth Gabi Content Blocker 1.5.3 
 
 
