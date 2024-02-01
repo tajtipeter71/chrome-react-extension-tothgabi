@@ -8,7 +8,7 @@ A méltán csodálatos Tóth Gabi Content Blocker chrome kigészítő azon fejle
 ### `npm install`
 
 ## Fordítás
-### `npm build`
+### `npm run build`
 
 Fordítás után a **build** mappa lesz az extension, az kell a chromenak.
 
