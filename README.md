@@ -2,12 +2,15 @@
 # Tóth Gabi Content Blocker 1.5.3 
 
 
-A méltán csodálatos TG blocker chrome kigészítő azon fejlesztőknek szánt példánya, Akik szeretik a React user Interface fw-öt.
-
-
-## Funkciók
+A méltán csodálatos TG blocker chrome kigészítő azon fejlesztőknek szánt példánya, akik szeretik a React User Interface-t.
 
 ## Telepítés
+### `npm install`
+
+## Fordítás
+### `npm build`
+
+Fordítás után a **build** mappa lesz az extension, az kell a chromenak.
 
 ## Súgó és Támogatás
 
